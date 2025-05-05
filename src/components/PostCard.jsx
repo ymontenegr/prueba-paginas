@@ -6,11 +6,11 @@ function PostCard(props) {
 
   return (
     <article>
-        <Link to={'/blog/${post.id}'}>{post.id} - {post.title}</Link>
+        <h3><Link to={`/blog/${post.id}`}>{post.id} - {post.title}</Link></h3>
         
         <p>{post.body}</p>
     </article>
-  )
+  );
 }
 
 export default PostCard

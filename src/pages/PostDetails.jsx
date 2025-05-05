@@ -7,28 +7,22 @@ function PostDetails() {
     const [post, setPost] = useState();
 
     const fetchPost = async(id) => {
-        const response = await fetch ("https://jsonplaceholder.typicode.com/posts/${id}");
+        const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${ id }`);
         const data = await response.json();
+        console.log(data);
         setPost(data);
     }
 
     useEffect(() => {
         fetchPost(id);
+        console.log(post);
     }, [])
 
 
   return (
     <>
-        <HeaderComponent></HeaderComponent>
-
-    {post && (
-        <section>
-            <h3>{post.id} - {post.title}</h3>
-            <p>{post.userId}</p>
-            <p>{post.body}</p>
-        </section>
-    )}
-        
+    <HeaderComponent></HeaderComponent>
+    <div>PostCard</div>
     </>
   )
 }
