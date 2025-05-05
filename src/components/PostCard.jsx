@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function PostCard(props) {
 
@@ -5,7 +6,8 @@ function PostCard(props) {
 
   return (
     <article>
-        <h3>{post.id} - {post.title}</h3>
+        <Link to={'/blog/${post.id}'}>{post.id} - {post.title}</Link>
+        
         <p>{post.body}</p>
     </article>
   )
