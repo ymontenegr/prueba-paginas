@@ -22,7 +22,16 @@ function PostDetails() {
   return (
     <>
     <HeaderComponent></HeaderComponent>
-    <div>PostCard</div>
+
+    {post && (
+      <section>
+        <h3> {post.id} - {post.title}</h3>
+        <p>User: {post.userId}</p>
+        <p>{post.body}</p>
+      </section>
+    )}
+    
+    
     </>
   )
 }
