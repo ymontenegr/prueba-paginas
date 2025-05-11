@@ -17,6 +17,7 @@ function BlogPage() {
         setError(false);
       }
       catch (e) {
+        console.log(e);
         setError(true);
       }
   };
